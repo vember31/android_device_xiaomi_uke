@@ -8,5 +8,6 @@
   <project path="vendor/xiaomi/sm8635-common" name="vember31/android_vendor_xiaomi_sm8635-common" remote="github-vember31" revision="lineage-23.2" />
   <project path="vendor/xiaomi/uke" name="vember31/android_vendor_xiaomi_uke" remote="github-vember31" revision="lineage-23.2" />
 
+  <remove-project name="LineageOS/android_hardware_xiaomi" optional="true" />
   <project path="hardware/xiaomi" name="LineageOS/android_hardware_xiaomi" remote="github-vember31" revision="lineage-23.2" />
 </manifest>
