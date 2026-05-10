@@ -1,6 +1,7 @@
 # Xiaomi Pad 7 (`uke`) Device Tree
 
-This is a draft LineageOS device tree for Xiaomi Pad 7 / POCO Pad X1 (`uke`).
+This is a draft Lunaris AOSP device tree for Xiaomi Pad 7 / POCO Pad X1
+(`uke`), adapted from the LineageOS bringup tree.
 It is intended to be used with the Xiaomi Pad 7 Resources common trees:
 
 ```text
@@ -11,7 +12,7 @@ vendor/xiaomi/sm8635-common
 vendor/xiaomi/uke
 ```
 
-For a `repo` checkout that should use the `vember31` GitHub forks, use
+For a Lunaris `repo` checkout that should use the `vember31` GitHub forks, use
 `manifests/vember31_uke.xml` as a local manifest. Lineage roomservice prefixes
 normal `lineage.dependencies` entries with `LineageOS/`, so the local manifest
 is the owner mapping that makes a build tree fetch these forked repositories:
@@ -23,6 +24,19 @@ device/xiaomi/uke-kernel          vember31/android_device_xiaomi_uke-kernel
 vendor/xiaomi/sm8635-common       vember31/android_vendor_xiaomi_sm8635-common
 vendor/xiaomi/uke                 vember31/android_vendor_xiaomi_uke
 hardware/xiaomi                   LineageOS/android_hardware_xiaomi
+```
+
+Lunaris sync/build outline:
+
+```bash
+repo init -u https://github.com/Lunaris-AOSP/android -b 16.2 --git-lfs
+mkdir -p .repo/local_manifests
+curl -fsSL https://raw.githubusercontent.com/vember31/android_device_xiaomi_uke/lunaris-16.2/manifests/vember31_uke.xml \
+  -o .repo/local_manifests/vember31_uke.xml
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+. build/envsetup.sh
+breakfast uke
+m bacon
 ```
 
 Status:

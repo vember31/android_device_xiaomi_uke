@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2026 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="lunaris_device_message">Xiaomi Pad 7 / POCO Pad X1</string>
+    <string name="lunaris_processor_code_message">Snapdragon 7+ Gen 3</string>
+    <string name="lunaris_battery_type_message">8850 mAh</string>
+    <string name="lunaris_screen_message">11.2-inch 3.2K 144Hz</string>
+</resources>

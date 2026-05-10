@@ -8,6 +8,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_uke.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_uke-user \
-    lineage_uke-userdebug \
-    lineage_uke-eng
+    lineage_uke-bp4a-user \
+    lineage_uke-bp4a-userdebug \
+    lineage_uke-bp4a-eng

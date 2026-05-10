@@ -33,5 +33,9 @@ endif
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
 
+# Lunaris overlays
+PRODUCT_PACKAGES += \
+    LunarisSettingsOverlayUke
+
 # Inherit from the device-specific proprietary files makefile.
 $(call inherit-product, vendor/xiaomi/uke/uke-vendor.mk)

@@ -8,6 +8,13 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
+# Lunaris device options.
+SURFACE_FLINGER_BOOST := true
+TARGET_SUPPORTS_GOOGLE_TELEPHONY := false
+
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,144)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
+
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 
@@ -32,3 +39,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # GMS
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# Lunaris
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.lunaris.maintainer=vember31
