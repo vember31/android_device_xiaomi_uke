@@ -16,8 +16,9 @@ Status:
 - `device/xiaomi/uke` skeleton exists.
 - `device/xiaomi/sm8635-common` is expected to provide the shared board config,
   packages, overlays, fstab, init, VINTF, and shared proprietary blob list.
-- `device/xiaomi/uke-kernel` is expected to provide the stock prebuilt kernel,
-  DTBO, DTBs, kernel headers, and modules.
+- `device/xiaomi/uke-kernel` has been generated from the same stock firmware
+  with the raw kernel image, DTBO, DTB, vendor ramdisk modules, vendor DLKM
+  modules, and system DLKM modules.
 - `proprietary-files.txt` is based on
   `uke_global_images_OS3.0.9.0.WOZMIXM_20260323.0000.00_16.0_global` and lists
   the non-common `uke` camera, audio, and touch blobs.
