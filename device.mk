@@ -24,8 +24,10 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(KERNEL_PATH)/modules/system/flatten/,$(TARGET_COPY_OUT_SYSTEM_DLKM)/flatten/lib/modules/)
 endif
 
-# Vendor kernel headers from the prebuilt kernel tree.
+# Vendor kernel headers from the prebuilt kernel tree, when present.
+ifneq ($(wildcard $(KERNEL_PATH)/kernel-headers),)
 PRODUCT_VENDOR_KERNEL_HEADERS += $(KERNEL_PATH)/kernel-headers
+endif
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
