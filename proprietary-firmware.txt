@@ -2,6 +2,27 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 # Firmware blobs for Xiaomi Pad 7 / POCO Pad X1 (uke).
-#
-# No dedicated firmware blobs are listed here yet. Device-specific firmware
-# discovered from stock OS3.0.9.0 is currently tracked in proprietary-files.txt.
+
+abl.elf;AB
+aop.mbn;AB
+aop_devcfg.mbn;AB
+BTFM.bin;AB
+countrycode.img;AB
+cpucp.elf;AB
+cpucp_dtbs.elf;AB
+devcfg.mbn;AB
+dspso.bin;AB
+featenabler.mbn;AB
+hypvm.mbn;AB
+imagefv.elf;AB
+keymint.mbn;AB
+NON-HLOS.bin;AB
+multi_image_qti.mbn;AB
+qupv3fw.elf;AB
+shrm.elf;AB
+tz.mbn;AB
+uefi.elf;AB
+uefi_sec.mbn;AB
+xbl_s.melf;AB
+xbl_config.elf;AB
+XblRamdump.elf;AB
