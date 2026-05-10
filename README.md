@@ -42,7 +42,7 @@ Status:
 The current product fingerprint is based on the extracted `OS3.0.9.0.WOZMIXM`
 system build properties.
 
-Bringup note: the public `vendor/xiaomi/sm8635-common` blobs are from Pad 7
-Pro firmware. For first bringup, use the local `android_vendor_xiaomi_sm8635-common`
-tree regenerated from the same `OS3.0.9.0.WOZMIXM` `uke` firmware so shared
+Build note: use the `vember31/android_vendor_xiaomi_sm8635-common` tree from
+`manifests/vember31_uke.xml`. It was regenerated from the same
+`OS3.0.9.0.WOZMIXM` `uke` firmware as the device vendor tree, so shared
 same-path blobs match this device.
