@@ -37,7 +37,8 @@ Status:
   `uke_global_images_OS3.0.9.0.WOZMIXM_20260323.0000.00_16.0_global` and lists
   the non-common `uke` camera, audio, and touch blobs.
 - `vendor/xiaomi/uke` has been generated from the same stock firmware with 751
-  device-specific blobs and the camera blob fixups from `extract-files.py`.
+  device-specific blobs, stock firmware radio images, and the camera blob fixups
+  from `extract-files.py`.
 
 The current product fingerprint is based on the extracted `OS3.0.9.0.WOZMIXM`
 system build properties.
