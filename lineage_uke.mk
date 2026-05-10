@@ -9,6 +9,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 # Lunaris device options.
+TARGET_CUSTOM_UDFPS := false
+WITH_GMS := true
 SURFACE_FLINGER_BOOST := true
 TARGET_SUPPORTS_GOOGLE_TELEPHONY := false
 
