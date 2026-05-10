@@ -1,0 +1,7 @@
+# Copyright (C) 2024 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+# Firmware blobs for Xiaomi Pad 7 / POCO Pad X1 (uke).
+#
+# No dedicated firmware blobs are listed here yet. Device-specific firmware
+# discovered from stock OS3.0.9.0 is currently tracked in proprietary-files.txt.
