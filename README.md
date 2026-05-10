@@ -11,6 +11,20 @@ vendor/xiaomi/sm8635-common
 vendor/xiaomi/uke
 ```
 
+For a `repo` checkout that should use the `vember31` GitHub forks, use
+`manifests/vember31_uke.xml` as a local manifest. Lineage roomservice prefixes
+normal `lineage.dependencies` entries with `LineageOS/`, so the local manifest
+is the owner mapping that makes a build tree fetch these forked repositories:
+
+```text
+device/xiaomi/uke                 vember31/android_device_xiaomi_uke
+device/xiaomi/sm8635-common       vember31/android_device_xiaomi_sm8635-common
+device/xiaomi/uke-kernel          vember31/android_device_xiaomi_uke-kernel
+vendor/xiaomi/sm8635-common       vember31/android_vendor_xiaomi_sm8635-common
+vendor/xiaomi/uke                 vember31/android_vendor_xiaomi_uke
+hardware/xiaomi                   LineageOS/android_hardware_xiaomi
+```
+
 Status:
 
 - `device/xiaomi/uke` skeleton exists.

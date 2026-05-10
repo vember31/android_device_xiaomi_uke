@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="github-vember31" fetch="https://github.com" />
+
+  <project path="device/xiaomi/uke" name="vember31/android_device_xiaomi_uke" remote="github-vember31" revision="lineage-23.2" />
+  <project path="device/xiaomi/sm8635-common" name="vember31/android_device_xiaomi_sm8635-common" remote="github-vember31" revision="lineage-23.2" />
+  <project path="device/xiaomi/uke-kernel" name="vember31/android_device_xiaomi_uke-kernel" remote="github-vember31" revision="lineage-23.2" />
+  <project path="vendor/xiaomi/sm8635-common" name="vember31/android_vendor_xiaomi_sm8635-common" remote="github-vember31" revision="lineage-23.2" />
+  <project path="vendor/xiaomi/uke" name="vember31/android_vendor_xiaomi_uke" remote="github-vember31" revision="lineage-23.2" />
+
+  <project path="hardware/xiaomi" name="LineageOS/android_hardware_xiaomi" remote="github-vember31" revision="lineage-23.2" />
+</manifest>
