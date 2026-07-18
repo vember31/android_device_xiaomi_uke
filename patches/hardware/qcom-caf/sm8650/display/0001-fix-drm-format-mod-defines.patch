@@ -1,0 +1,21 @@
+diff --git a/gralloc/gr_utils.cpp b/gralloc/gr_utils.cpp
+index afd96148ad..d4426bd1d2 100644
+--- a/gralloc/gr_utils.cpp
++++ b/gralloc/gr_utils.cpp
+@@ -32,6 +32,16 @@
+  */
+ 
+ #ifndef QMAA
++#ifndef DRM_FORMAT_MOD_QCOM_DX
++#define DRM_FORMAT_MOD_QCOM_DX fourcc_mod_code(QCOM, 0x2)
++#endif
++#ifndef DRM_FORMAT_MOD_QCOM_TIGHT
++#define DRM_FORMAT_MOD_QCOM_TIGHT fourcc_mod_code(QCOM, 0x4)
++#endif
++#ifndef DRM_FORMAT_MOD_QCOM_TILE
++#define DRM_FORMAT_MOD_QCOM_TILE fourcc_mod_code(QCOM, 0x10)
++#endif
++
+ #include <display/media/mmm_color_fmt.h>
+ #include <display/drm/sde_drm.h>
+ #endif

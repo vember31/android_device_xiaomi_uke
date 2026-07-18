@@ -5,6 +5,9 @@
 #
 
 DEVICE_PATH := device/xiaomi/uke
+# Auto-apply device patches to the source tree
+$(shell bash $(DEVICE_PATH)/apply-patches.sh $(ANDROID_BUILD_TOP))
+
 KERNEL_PATH := $(DEVICE_PATH)-kernel
 
 # Inherit from the common OEM chipset makefile.
@@ -18,6 +21,10 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
+
+# Maintainer prop
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.lunaris.maintainer=vember31
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/uke/uke-vendor.mk)
