@@ -5,8 +5,6 @@
 #
 
 DEVICE_PATH := device/xiaomi/uke
-# Auto-apply device patches to the source tree
-$(shell bash $(DEVICE_PATH)/apply-patches.sh $(ANDROID_BUILD_TOP))
 
 KERNEL_PATH := $(DEVICE_PATH)-kernel
 
