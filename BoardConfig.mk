@@ -57,7 +57,7 @@ endif
 DEVICE_MANIFEST_FILE := \
     $(COMMON_PATH)/configs/vintf/manifest.xml
 
-# Partitions - measured from OS3.0.9.0.WOZMIXM fastboot firmware.
+# Partitions - measured from OS3.0.301.0.WOZMIXM fastboot firmware.
 BOARD_SUPER_PARTITION_SIZE           := 11274289152
 BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 11263803392
 
