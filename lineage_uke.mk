@@ -11,6 +11,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 # Lunaris device options.
 TARGET_CUSTOM_UDFPS := false
 WITH_GMS := true
+WITH_GMS_COMMS_SUITE := true
+WITH_PIXEL_LAUNCHER := true
+TARGET_USE_MAPS := true
+TARGET_USE_FILES := true
+TARGET_USE_GPHOTOS := true
+TARGET_USE_WALLPAPERS := true
 USE_REALITY_ENGINE := true
 SURFACE_FLINGER_BOOST := true
 TARGET_SUPPORTS_GOOGLE_TELEPHONY := false
