@@ -56,6 +56,7 @@ odm/etc/init/vendor.xiaomi.hardware.seaaudio.rc
 odm/etc/vintf/manifest/vendor.xiaomi.hardware.seaaudio.xml
 odm/firmware/fs19xx.fsm
 odm/lib64/vendor.xiaomi.hardware.seaaudio-V1-ndk.so
+vendor/lib64/libRecordCNN.so
 vendor/etc/acdbdata/haptics_data/click.pcm
 vendor/etc/acdbdata/haptics_data/double_click.pcm
 vendor/etc/acdbdata/haptics_data/heavy_click.pcm

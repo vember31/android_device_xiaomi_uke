@@ -15,6 +15,7 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/xiaomi/sm8635-common',
+    'hardware/qcom-caf/sm8650',
     'hardware/xiaomi',
     'vendor/xiaomi/sm8635-common',
 ]
