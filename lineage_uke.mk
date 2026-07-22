@@ -41,8 +41,8 @@ PRODUCT_SYSTEM_NAME := uke_global
 PRODUCT_SYSTEM_DEVICE := uke
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="missi-user 16 BP2A.250605.031.A3 OS3.0.301.0.WOZMIXM release-keys" \
-    BuildFingerprint=Xiaomi/missi/missi:16/BP2A.250605.031.A3/OS3.0.301.0.WOZMIXM:user/release-keys \
+    BuildDesc="uke_global-user 16 BP2A.250605.031.A3 OS3.0.301.0.WOZMIXM release-keys" \
+    BuildFingerprint=Xiaomi/uke_global/uke:16/BP2A.250605.031.A3/OS3.0.301.0.WOZMIXM:user/release-keys \
     DeviceName=$(PRODUCT_SYSTEM_DEVICE) \
     DeviceProduct=$(PRODUCT_SYSTEM_NAME)
 

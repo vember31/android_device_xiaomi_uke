@@ -23,12 +23,13 @@ ifneq ($(wildcard $(KERNEL_PATH)/kernel),)
 TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_PREBUILT_KERNEL       := $(KERNEL_PATH)/kernel
 BOARD_PREBUILT_DTBOIMAGE     := $(KERNEL_PATH)/dtbo.img
-BOARD_INCLUDE_DTB_IN_BOOTIMG :=
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO  :=
 endif
 
 ifneq ($(wildcard $(KERNEL_PATH)/dtb.img),)
-TARGET_PREBUILT_DTB := $(KERNEL_PATH)/dtb.img
+$(PRODUCT_OUT)/dtb.img : $(KERNEL_PATH)/dtb.img
+	cp $< $@
 else ifneq ($(wildcard $(KERNEL_PATH)/dtbs/*.dtb),)
 BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtbs
 endif
@@ -56,9 +57,10 @@ endif
 # Workaround to make lineage's soong generator work
 TARGET_KERNEL_SOURCE := $(KERNEL_PATH)/kernel-headers
 
-# VINTF - keep the common Xiaomi/QCOM manifests, but avoid the non-QMAA audio
-# fragments that can duplicate vendor-declared soundtrigger HALs.
+# VINTF
 DEVICE_MANIFEST_FILE := \
+    $(AUDIO_HAL_DIR)/configs/common/manifest_non_qmaa.xml \
+    $(AUDIO_HAL_DIR)/configs/common/manifest_non_qmaa_extn.xml \
     $(COMMON_PATH)/configs/vintf/manifest.xml
 
 # Partitions - measured from OS3.0.301.0.WOZMIXM fastboot firmware.
