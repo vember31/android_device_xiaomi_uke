@@ -14,6 +14,7 @@ include device/xiaomi/sm8635-common/BoardConfigCommon.mk
 
 # Kernel version (6.1, GKI 2.0) - prebuilt only.
 TARGET_KERNEL_VERSION := 6.1
+TARGET_NO_KERNEL_OVERRIDE := true
 
 # Kernel - prebuilt from device/xiaomi/uke-kernel.
 # The Xiaomi-Pad-7-Pro-Resources uke-kernel tree currently stores the kernel
@@ -51,6 +52,9 @@ endif
 ifneq ($(wildcard $(KERNEL_PATH)/modules/ramdisk/modules.load.recovery),)
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/modules/ramdisk/modules.load.recovery))
 endif
+
+# Workaround to make lineage's soong generator work
+TARGET_KERNEL_SOURCE := $(KERNEL_PATH)/kernel-headers
 
 # VINTF - keep the common Xiaomi/QCOM manifests, but avoid the non-QMAA audio
 # fragments that can duplicate vendor-declared soundtrigger HALs.
