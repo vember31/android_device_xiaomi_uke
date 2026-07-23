@@ -68,6 +68,7 @@ BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 11263803392
 
 # SELinux
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/configs/properties/odm.prop
