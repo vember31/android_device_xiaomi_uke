@@ -10,6 +10,13 @@ $(call inherit-product, device/xiaomi/sm8635-common/common.mk)
 DEVICE_PATH := device/xiaomi/uke
 KERNEL_PATH := device/xiaomi/uke-kernel
 
+# Install the prebuilt kernel image to $(PRODUCT_OUT)/kernel as a standalone
+# target. Required by the VINTF kernel compatibility check (check_vintf_all ->
+# kernel_version.txt) on the bp4a/userdebug build path; TARGET_PREBUILT_KERNEL
+# feeds boot.img but does not install this file.
+PRODUCT_COPY_FILES += \
+    $(KERNEL_PATH)/kernel:kernel
+
 # System DLKM modules
 # uke-kernel tree layout:
 #   modules/system/   -> system_dlkm partition (GKI base modules)
