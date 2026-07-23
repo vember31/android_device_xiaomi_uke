@@ -78,6 +78,8 @@ blob_fixups: blob_fixups_user_type = {
             'android.hardware.graphics.allocator-V1-ndk.so',
             'android.hardware.graphics.allocator-V2-ndk.so',
         ),
+    'vendor/lib64/libar-pal.so': blob_fixup()
+        .replace_needed('libaudioroute.so', 'libaudioroute-v34.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
