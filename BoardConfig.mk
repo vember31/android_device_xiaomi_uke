@@ -57,10 +57,9 @@ endif
 # Workaround to make lineage's soong generator work
 TARGET_KERNEL_SOURCE := $(KERNEL_PATH)/kernel-headers
 
-# VINTF
+# VINTF - exclude non-QMAA audio fragments; soundtrigger HALs are already
+# declared in the vendor manifest and would cause duplicate FqInstance errors.
 DEVICE_MANIFEST_FILE := \
-    $(AUDIO_HAL_DIR)/configs/common/manifest_non_qmaa.xml \
-    $(AUDIO_HAL_DIR)/configs/common/manifest_non_qmaa_extn.xml \
     $(COMMON_PATH)/configs/vintf/manifest.xml
 
 # Partitions - measured from OS3.0.301.0.WOZMIXM fastboot firmware.
