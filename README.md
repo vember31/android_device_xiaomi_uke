@@ -48,16 +48,16 @@ Status:
   with the raw kernel image, DTBO, DTB, vendor ramdisk modules, vendor DLKM
   modules, and system DLKM modules.
 - `proprietary-files.txt` is based on
-  `uke_global_images_OS3.0.9.0.WOZMIXM_20260323.0000.00_16.0_global` and lists
+  `uke_global_images_OS3.0.301.0.WOZMIXM_20260415.0000.00_16.0_global` and lists
   the non-common `uke` camera, audio, and touch blobs.
 - `vendor/xiaomi/uke` has been generated from the same stock firmware with 751
   device-specific blobs, stock firmware radio images, and the camera blob fixups
   from `extract-files.py`.
 
-The current product fingerprint is based on the extracted `OS3.0.9.0.WOZMIXM`
+The current product fingerprint is based on the extracted `OS3.0.301.0.WOZMIXM`
 system build properties.
 
 Build note: use the `vember31/android_vendor_xiaomi_sm8635-common` tree from
 `manifests/vember31_uke.xml`. It was regenerated from the same
-`OS3.0.9.0.WOZMIXM` `uke` firmware as the device vendor tree, so shared
+`OS3.0.301.0.WOZMIXM` `uke` firmware as the device vendor tree, so shared
 same-path blobs match this device.
