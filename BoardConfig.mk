@@ -25,6 +25,9 @@ TARGET_PREBUILT_KERNEL       := $(KERNEL_PATH)/kernel
 BOARD_PREBUILT_DTBOIMAGE     := $(KERNEL_PATH)/dtbo.img
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO  :=
+
+$(PRODUCT_OUT)/kernel : $(TARGET_PREBUILT_KERNEL)
+	cp $< $@
 endif
 
 ifneq ($(wildcard $(KERNEL_PATH)/dtb.img),)
@@ -69,6 +72,8 @@ BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 11263803392
 # SELinux
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+
+BOARD_KERNEL_CMDLINE += ignore_loglevel log_buf_len=16M printk.devkmsg=on
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/configs/properties/odm.prop
