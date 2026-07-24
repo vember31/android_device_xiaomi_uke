@@ -10,7 +10,8 @@ KERNEL_PATH := device/xiaomi/uke-kernel
 # Inherit from sm8635-common board configuration.
 include device/xiaomi/sm8635-common/BoardConfigCommon.mk
 
-# Board - TARGET_BOOTLOADER_BOARD_NAME defaults to "pineapple" via sm8635-common.
+# Board
+TARGET_BOOTLOADER_BOARD_NAME := uke
 
 # Kernel version (6.1, GKI 2.0) - prebuilt only.
 TARGET_KERNEL_VERSION := 6.1
@@ -25,9 +26,6 @@ TARGET_PREBUILT_KERNEL       := $(KERNEL_PATH)/kernel
 BOARD_PREBUILT_DTBOIMAGE     := $(KERNEL_PATH)/dtbo.img
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO  :=
-
-$(PRODUCT_OUT)/kernel : $(TARGET_PREBUILT_KERNEL)
-	cp $< $@
 endif
 
 ifneq ($(wildcard $(KERNEL_PATH)/dtb.img),)
