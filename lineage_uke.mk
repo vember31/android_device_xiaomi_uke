@@ -27,6 +27,26 @@ PRODUCT_MODEL := 2410CRP4CG
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
+# Lunaris
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.lunaris.maintainer=vember31
+
+WITH_GMS := true
+SURFACE_FLINGER_BOOST := true
+TARGET_CUSTOM_UDFPS := false
+
+# Enable speed-profile dexopt
+TARGET_OPTIMIZED_DEXOPT := true
+
+# Boot animation
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Reality Engine
+USE_REALITY_ENGINE := true
+
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="missi-user 16 BP2A.250605.031.A3 OS3.0.8.0.WOZMIXM release-keys" \
     BuildFingerprint=Xiaomi/uke_global/uke:16/BP2A.250605.031.A3/OS3.0.8.0.WOZMIXM:user/release-keys
